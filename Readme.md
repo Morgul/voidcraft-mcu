@@ -1,4 +1,4 @@
-# Vac-U-Suck Arduino Control
+# VoidCraft Mk. I Arduino Control
 
 This is the firmware for an arduino-based vacuform machine. Features include:
 
@@ -14,8 +14,5 @@ This is the firmware for an arduino-based vacuform machine. Features include:
 
 ## Getting started
 
-
-
-Void Maker
-VoidCraft
+_To do..._
 
