@@ -30,4 +30,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/controllers/tempsensor/tempSensor.cpp src/controllers/tempsensor/tempSensor.h src/controllers/display/display.cpp src/controllers/display/display.h src/controllers/baseController.cpp src/controllers/baseController.h)
+add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/controllers/tempsensor/tempSensor.cpp src/controllers/tempsensor/tempSensor.h src/controllers/display/display.cpp src/controllers/display/display.h src/controllers/baseController.cpp src/controllers/baseController.h src/controllers/heater/heater.cpp src/controllers/heater/heater.h src/config.h)

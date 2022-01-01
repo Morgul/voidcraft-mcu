@@ -1,42 +1,29 @@
 //----------------------------------------------------------------------------------------------------------------------
-// VoidCraft Arduino Control
+// Configuration
 //----------------------------------------------------------------------------------------------------------------------
 
-#include <Arduino.h>
-
-#include "config.h"
-#include "controllers/display/display.h"
-#include "controllers/heater/heater.h"
-#include "controllers/tempsensor/tempSensor.h"
+#pragma once
 
 //----------------------------------------------------------------------------------------------------------------------
-// Controllers
+// Pins
 //----------------------------------------------------------------------------------------------------------------------
 
-TempSensor tempSensor = TempSensor();
-DisplayController display = DisplayController(&tempSensor);
-HeaterController heater = HeaterController(&tempSensor);
+#define TEMP_SENSOR_DO_PIN 4
+#define TEMP_SENSOR_CS_PIN 5
+#define TEMP_SENSOR_CLK_PIN 6
+
+#define HEATER_RELAY_PIN 45
 
 //----------------------------------------------------------------------------------------------------------------------
+// Serial
+//----------------------------------------------------------------------------------------------------------------------
 
-void setup()
-{
-    Serial.begin(BAUDRATE);
+#define BAUDRATE 9600
 
-    // Set up Controllers
-    tempSensor.setup();
-    display.setup();
-    heater.setup();
+//----------------------------------------------------------------------------------------------------------------------
+// Temperature Sensor
+//----------------------------------------------------------------------------------------------------------------------
 
-    // Wait for MAX6675 chip to stabilize
-    delay(500);
-}
-
-void loop()
-{
-    tempSensor.tick();
-    display.tick();
-    heater.tick();
-}
+#define TEMP_SENSOR_OFFSET 0.0
 
 //----------------------------------------------------------------------------------------------------------------------
