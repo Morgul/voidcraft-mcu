@@ -9,6 +9,11 @@
 TempSensor::TempSensor(double offset)
 {
     this->loopInterval = 500;
+    this->offset = offset;
+}
+
+void TempSensor::setup()
+{
     this->sensor = MAX6675(this->pinCLK, this->pinCS, this->pinDO, offset);
 }
 

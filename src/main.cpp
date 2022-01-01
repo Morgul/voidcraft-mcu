@@ -34,6 +34,10 @@ void setup()
     // Hard code the heater relay to be on.
     digitalWrite(heatRelayPin, 1);
 
+    // Set up Controllers
+    ovenTemp.setup();
+    display.setup();
+
     // Wait for MAX6675 chip to stabilize
     delay(500);
 }

@@ -12,6 +12,11 @@ DisplayController::DisplayController(TempSensor* tempSensor)
     this->tempSensor = tempSensor;
 }
 
+void DisplayController::setup()
+{
+    // TODO: Any setup required.
+}
+
 void DisplayController::loop()
 {
     // TODO: Eventually, we display this on the LCD.

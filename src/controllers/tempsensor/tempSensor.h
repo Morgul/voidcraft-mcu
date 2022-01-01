@@ -20,6 +20,7 @@ private:
     int8_t pinCLK = 6;
 
     // Sensor
+    double offset;
     MAX6675 sensor;
 
 protected:
@@ -28,7 +29,9 @@ protected:
 public:
     double currentTemp = 0;
 
-    TempSensor(double offset = 0.0);
+    explicit TempSensor(double offset = 0.0);
+
+    void setup() override;
 };
 
 #endif //VOIDCRAFT_MCU_TEMPSENSOR_H

@@ -19,6 +19,7 @@ protected:
     virtual void loop() = 0;
 
 public:
+    virtual void setup() {};
     void tick();
 };
 

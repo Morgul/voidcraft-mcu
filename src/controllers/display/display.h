@@ -20,6 +20,8 @@ protected:
 
 public:
     explicit DisplayController(TempSensor* tempSensor);
+
+    void setup() override;
 };
 
 #endif //VOIDCRAFT_MCU_DISPLAY_H
