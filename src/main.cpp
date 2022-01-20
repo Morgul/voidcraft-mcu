@@ -28,6 +28,9 @@ void setup()
     display.setup();
     heater.setup();
 
+    heater.setPoint = 50;
+    heater.enable();
+
     // Wait for MAX6675 chip to stabilize
     delay(500);
 }

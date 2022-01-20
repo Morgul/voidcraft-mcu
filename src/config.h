@@ -24,6 +24,15 @@
 // Temperature Sensor
 //----------------------------------------------------------------------------------------------------------------------
 
-#define TEMP_SENSOR_OFFSET 0.0
+#define TEMP_SENSOR_OFFSET 0.0  // Units: degrees celsius
+
+//----------------------------------------------------------------------------------------------------------------------
+// Temperature Controller
+//----------------------------------------------------------------------------------------------------------------------
+
+#define MAX_TEMP 400                // Units: degrees celsius
+#define MAX_SETPOINT_DELTA 50       // Units: degrees celsius
+#define TEMP_EPSILON 10             // Units: degrees celsius
+#define MIN_HEATER_CYCLE_COUNT 7    // The minimum cycle count before we consider ourselves to be 'approaching'.
 
 //----------------------------------------------------------------------------------------------------------------------
